@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beauty & Lifestyle Gallery</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff9f9;
+      margin: 0;
+      padding: 0;
+      background-image: url(Background\ wallpaper.jpg);
+      height: 120vh;
+      background-size: cover;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-top: 40px;
+      color: #e91e63;
+    }
+
+    .filter-buttons {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .filter-buttons button {
+      background-color: #f48fb1;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .filter-buttons button:hover {
+      background-color: #ec407a;
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 20px;
+    }
+
+    .gallery-item {
+      width: 280px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transform: translateY(30px);
+      opacity: 0;
+      transition: all 1s ease;
+      text-align: center;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .caption {
+      font-size: 14px;
+      margin: 10px;
+      color: #555;
+      font-style: italic;
+    }
+
+    .gallery-item.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin: 40px 0;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1.5s ease;
+    }
+
+    .video-container.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    iframe {
+      border-radius: 10px;
+      max-width: 90%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #e91e63;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <h2>💄 Beauty & Lifestyle</h2>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<nav style="padding: 15px; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px;">
+  <a href="Page 1 WEB .html" style="background-color: #dc82a0; color:black; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 8px;">
+    <i class="fas fa-house-user"></i> Home
+  </a>
+  <a href="Page 2 WEB.html" style="background-color:  #dc82a0; color: black; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 8px;">
+    <i class="fas fa-heart"></i> Beauty Blog
+  </a>
+  <a href="Page 3 WEB.html" style="background-color: #dc82a0; color: black; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 8px;">
+    <i class="fas fa-image"></i> Gallery
+  </a>
+</nav>
+
+
+
+  <div class="filter-buttons">
+    <button onclick="filterGallery('all')">All</button>
+    <button onclick="filterGallery('skincare')">Skincare</button>
+    <button onclick="filterGallery('makeup')">Makeup</button>
+  </div>
+
+  <div class="gallery-container">
+    <div class="gallery-item skincare">
+      <img src="cleanser routine.jpg" alt="Cleanser Routine">
+      <p class="caption">Start fresh: cleanse, breathe, glow.</p>
+    </div>
+
+    <div class="gallery-item skincare">
+      <img src="my skincare.jpg" alt="Night Skincare">
+      <p class="caption">My night ritual for hydrated, happy skin.</p>
+    </div>
+
+    <div class="gallery-item makeup">
+      <img src="lipstick collection.jpg" alt="Lipstick Collection">
+      <p class="caption">A pop of color, a boost of confidence.</p>
+    </div>
+
+    <div class="gallery-item skincare">
+      <img src="makeup routine.jpg" alt="Makeup Time">
+      <p class="caption">Makeup is not a mask that covers up your beauty.</p>
+    </div>
+  </div>
+
+  <h2>🎥 Beauty Tips And Skincare Routine Hack</h2>
+
+  <div class="video-container" id="videoSection">
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/ij4y_M4M9WQ"
+      title="Skincare Hacks"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/EUU3k93SLHY"
+      title="Skincare Hacks 2"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+
+  <h2>📍My Location </h2>
+<div style="display: flex; justify-content: center; margin: 30px 0;">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.228426185881!2d100.50471037588354!3d6.463968523187384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304c7cce9e41c0c3%3A0x512f273e1855085b!2sINASIS%20Bank%20Rakyat%2C%20Universiti%20Utara%20Malaysia!5e0!3m2!1sen!2smy!4v1715848371689!5m2!1sen!2smy" 
+    width="600" 
+    height="450" 
+    style="border:0; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+
+  <footer>
+    &copy; 2025 Nurin Nazihah binti Nor Sham | Beauty & Lifestyle Gallery
+  </footer>
+
+  <script>
+    // Scroll animation
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const videoSection = document.getElementById('videoSection');
+
+    function onScroll() {
+      galleryItems.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          item.classList.add('show');
+        }
+      });
+
+      const videoRect = videoSection.getBoundingClientRect();
+      if (videoRect.top < window.innerHeight - 100) {
+        videoSection.classList.add('show');
+      }
+    }
+
+    window.addEventListener('scroll', onScroll);
+    window.addEventListener('load', onScroll);
+
+    // Filter logic
+    function filterGallery(category) {
+      const items = document.querySelectorAll('.gallery-item');
+      items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
